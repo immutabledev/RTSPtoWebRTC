@@ -132,7 +132,7 @@
   <script type="text/javascript">
 	function openSocket(f) {
 		var q = window.location.search.substring(1);
-		var socket = io.connect('https://{{ .domain }}:8183', {query: 'name='+f});
+		var socket = io.connect('https://'+window.location.hostname+':8183', {query: 'name='+f});
     $('#pond-preset-button').click(function() {
       $.ajax({
         type: 'POST',
